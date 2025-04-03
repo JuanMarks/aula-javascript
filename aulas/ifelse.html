@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nota = window.prompt("Digite a nota do aluno:")
+        const nota2 = window.prompt("Digite a 2 nota do aluno:")
+        const nota3 = window.prompt("Digite a 3 nota do aluno:")
+        const nota4 = window.prompt("Digite a 4 nota do aluno:")
+        const faltas = window.prompt("Digite as faltas do aluno:")
+        const media = (parseFloat(nota) + parseFloat(nota2) + parseFloat(nota3) + parseFloat(nota4)) / 4
+
+        // if(media >= 7 && faltas <= 4){
+        //     alert("Aprovado")
+        // }else if(media < 7 && media >= 5 && faltas <= 4){
+        //     alert("Recuperação")
+        // }else if(media < 5 && faltas < 4){
+        //     alert("Reprovado")
+        // }else if(media < 5 && faltas > 4){
+        //     alert("Jubilado")
+        // }else{
+        //     alert("nao entrou em nenhuma das condições")
+        // }
+
+        switch (true) {
+            case media >= 7 && faltas <= 4:
+                alert("Aprovado")
+                break
+            case media < 7 && media >= 5 && faltas <= 4:
+                alert("Recuperação")
+                break
+            case media < 5 && faltas < 4:
+                alert("Reprovado")
+                break
+            case media < 5 && faltas > 4:
+                alert("Jubilado")
+                break
+            default:
+                alert("nao entrou em nenhuma das condições")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const alunos = [];
+
+        for (let i = 0; i < 3; i++) {
+            const nome = prompt("Digite o nome do aluno: ");
+            const nota = prompt("Digite a nota do aluno: ");
+            alunos.push([nome, nota]);
+        }
+
+        const verificarseExiste = (aluno) => {
+            for (let i = 0; i < alunos.length; i++) {
+                if (alunos[i][0] === aluno) {
+                    const alunoEncontrado = alunos[i][0];
+                    return alert(`aluno encontrado ${alunoEncontrado} e sua nota é ${alunos[i][1]}`);
+                }
+            }
+        }
+
+        const alunoProcurado = prompt("Digite o nome do aluno que deseja procurar: ");
+        verificarseExiste(alunoProcurado);
+        
+ 
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const valorSalario = parseFloat(prompt("Digite o valor do salário: "));
+        const verificarAumentoSalario = (salario) => {
+            if(salario <= 1630){
+                salario += salario * 0.15;
+                return salario;
+            }else if(salario > 1630 && salario <= 3000){
+                salario += salario * 0.10;
+                return salario;
+            }
+            else if(salario > 3000 && salario <= 5000){
+                salario += salario * 0.05;
+                return salario;
+            }else if(salario > 5000){
+                salario += salario * 0.02;
+                return salario;
+            }else{
+                return "Valor inválido";
+            }
+        }
+
+        const novoSalario = verificarAumentoSalario(valorSalario);
+        if(novoSalario !== "Valor inválido"){
+            alert(`O novo salário é: R$ ${novoSalario.toFixed(2)}`);
+        }else{ 
+            alert(novoSalario);
+        }
+
+
+    </script>
+</body>
+</html>

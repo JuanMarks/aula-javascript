@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const verificaNumero = (numero, lista) => {
+            if (isNaN(numero)) {
+                alert('Digite um número válido!')
+                return false
+            } else if (numero < 0) {
+                alert('Digite um número maior que 0!')
+                return false
+            } else if (numero > lista.length){
+                alert(`Digite um numero menor que ${lista.length}`)
+                return false
+            } else {
+                return true
+            }
+        }
+        
+        // Adcionando fruta na lista
+        const adcionarFruta = (fruta, lista) => {
+            lista.push(fruta)
+            alert(`
+                Fruta adicionada com sucesso!
+                ${fruta} foi adicionada a lista de frutas.
+                ${lista}
+            `)
+        }
+
+        // Removendo fruta da lista
+        const removerFruta = (lista) => {
+            const ultimaFruta = lista[lista.length - 1]
+            lista.pop()
+            alert(`
+                A ultima fruta da lista foi removida com sucesso!
+                ${ultimaFruta} foi removida da lista de frutas.
+                ${lista}
+            `)
+        }
+
+        // Escolhendo ate que numero da lista de frutas deseja visualizar
+        const visualizarFrutas = (numero, lista) => {
+            const frutasSelecionadas = lista.slice(0, numero)
+            alert(`
+                As frutas selecionadas foram:
+                ${frutasSelecionadas}
+            `)
+        }
+
+        // visualizando as ultimas frutas
+        const visualizarUltimasFrutas = (numero, lista) => {
+            const frutasSelecionadas = lista.slice(-numero)
+            alert(`
+                As frutas selecionadas foram:
+                ${frutasSelecionadas}
+            `)
+        }
+
+        // Adcionando fruta na posição desejada
+        const adicionarFrutaNaPosicao = (fruta, posicao, lista) => {
+            lista.splice(posicao, 0, fruta)
+            alert(`
+                Fruta adicionada com sucesso!
+                ${fruta} foi adicionada a lista de frutas na posição ${posicao}.
+                ${lista}
+            `)
+        }
+
+        const frutas = ['tomate', 'abacate', 'morango', 'melancia']
+        const frutaAdd = prompt('Digite o nome da fruta que deseja adicionar: ')
+        adcionarFruta(frutaAdd, frutas)
+        removerFruta(frutas)
+
+        const numeroFrutas = parseInt(prompt('Digite um número para visualizar as frutas: '))
+        if (verificaNumero(numeroFrutas, frutas)) {
+            visualizarFrutas(numeroFrutas, frutas)
+        }else {
+            alert('Número inválido!')
+        }
+
+        const numeroUltimasFrutas = parseInt(prompt('Digite um número para visualizar as últimas frutas: '))
+        if (verificaNumero(numeroUltimasFrutas, frutas)) {
+            visualizarUltimasFrutas(numeroUltimasFrutas, frutas)
+        }else {
+            alert('Número inválido!')
+        }
+
+        frutaPosicao = prompt('Digite o nome da fruta que deseja adicionar: ')
+        const posicao = parseInt(prompt('Digite a posição que deseja adicionar a fruta: '))
+        if (verificaNumero(posicao, frutas)) {
+            adicionarFrutaNaPosicao(frutaPosicao, posicao, frutas)
+        }else {
+            alert('Número inválido!')
+        }
+        
+
+        
+
+    </script>
+</body>
+</html>

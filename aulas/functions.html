@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function exibaInfoEstudante(nome, nota){
+            alert(`O nome do aluno é ${nome}, e sua nota é ${nota}`);
+        }
+
+        function media(nota1, nota2, nota3, nota4){
+            return (nota1 + nota2 + nota3 + nota4) / 4;
+        }
+
+        // arrow function
+        const exibaInfoEstudanteArrow = (nome, nota) => {
+            alert(`O nome do aluno é ${nome}, e sua nota é ${nota}`);
+        }
+
+        const positivoNegativo = function(num){
+            if(num > 0){
+                return "Positivo";
+            } else if(num < 0){
+                return "Negativo";
+            } else {
+                return "Zero";
+            }
+        }
+
+        const parImpar = (num) => num % 2 === 0 ? "Par" : "Ímpar";
+
+        
+
+
+        
+    </script>
+</body>
+</html>

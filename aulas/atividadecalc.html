@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const operacao = prompt(`
+        // Olá, seja bem-vindo(a) à calculadora!
+        // Digite a operação desejada:
+        // 1 - Soma (+)
+        // 2 - Subtração (-)
+        // 3 - Multiplicação (*)
+        // 4 - Divisão (/)
+        // 5 - Resto da Divisão (%)
+        
+        // `);
+
+        // const calculadora = (n1, n2, operacao) => {
+        //     switch(operacao) {
+        //         case "+": return n1 + n2;
+        //         case "-": return n1 - n2;
+        //         case "*": return n1 * n2;
+        //         case "/":
+        //             if(n2 !== 0) {
+        //                 return n1 / n2;
+        //             } else {
+        //                 return "Divisão por zero não é permitida.";
+        //             }
+        //         case "%": return n1 % n2;
+        //         default: return "Operação inválida.";
+        //     }
+        // }
+
+        // const n1 = parseInt(prompt("Digite o primeiro número:"));
+        // const n2 = parseInt(prompt("Digite o segundo número:"));
+        // alert(calculadora(n1, n2, operacao));
+
+        // const calculadora = (operacao) => {
+        //     switch(operacao) {
+        //         case 1:
+        //             return "Soma";
+        //         case 2:
+        //             return "Subtração";
+        //         case 3:
+        //             return "Multiplicação";
+        //         case 4:
+        //             return "Divisão";
+        //         case 5:
+        //             return "Resto da Divisão";
+        //         default:
+        //             return "Operação inválida.";
+        //     }
+        // }
+        // const num1 = parseInt(prompt("Digite o primeiro número:"));
+        // const num2 = parseInt(prompt("Digite o segundo número:"));
+
+        // switch(operacao){
+        //     case 1:
+        //         alert(`A soma é: ${num1 + num2}`);
+        //         break;
+        //     case 2:
+        //         alert(`A subtração é: ${num1 - num2}`);
+        //         break;
+        //     case 3:
+        //         alert(`A multiplicação é: ${num1 * num2}`);
+        //         break;
+        //     case 4:
+        //         if(num2 !== 0) {
+        //             alert(`A divisão é: ${num1 / num2}`);
+        //         } else {
+        //             alert("Divisão por zero não é permitida.");
+        //         }
+        //         break;
+        //     case 5:
+        //         alert(`O resto da divisão é: ${num1 % num2}`);
+        //         break;
+        //     default:
+        //         alert("Operação inválida.");
+                
+        // }
+
+        const farenheitParaCelsius = function (f) {return (f - 32) * 5 / 9;}
+        const temperaturaF = parseFloat(prompt("Digite a temperatura em Fahrenheit:"));
+        alert(`A temperatura em Celsius é: ${farenheitParaCelsius(temperaturaF).toFixed(2)}°C`);
+    </script>
+</body>
+</html>

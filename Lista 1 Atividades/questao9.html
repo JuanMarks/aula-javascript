@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const valorProduto = parseFloat(prompt("Digite o valor do produto:"));
+        const valorDesconto = parseFloat(prompt("Digite o valor do desconto em porcentagem:"));
+        const valorDescontoDecimal = valorProduto * (valorDesconto / 100);
+        const valorFinal = valorProduto - valorDescontoDecimal;
+
+        alert(`O valor do produto é: R$ ${valorProduto.toFixed(2)}\nO valor do desconto é: R$ ${valorDescontoDecimal.toFixed(2)}\nO valor final do produto é: R$ ${valorFinal.toFixed(2)}`);
+
+    </script>
+</body>
+</html>
