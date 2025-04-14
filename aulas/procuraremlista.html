@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const alunos = ['Joao', 'Juliano', 'Caio', 'Ana']
+        const media = [10, 8, 7.5, 9]
+        const listaAlunos = [alunos, media]
+
+        const ExibeNomeENota = (aluno) => {
+            const alunoIndex = listaAlunos[0].indexOf(aluno)
+            const alunoIncludes = listaAlunos[0].includes(aluno)
+            if (alunoIncludes) {
+                return `O aluno(a) ${aluno} tem a nota ${listaAlunos[1][alunoIndex]}`
+            } else {
+                return 'Aluno não encontrado'
+            }
+        }
+
+        const alunoProcurado = prompt('Digite o nome do aluno que deseja procurar:')
+        const resultado = ExibeNomeENota(alunoProcurado)
+        alert(resultado)
+
+
+    </script>
+</body>
+</html>

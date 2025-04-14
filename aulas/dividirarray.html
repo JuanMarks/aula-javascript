@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const listaEstudantes = [
+            "Lucas",
+            "Ana",
+            "João",
+            "Maria",
+            "Pedro",
+            "Carla",
+            "Fernanda",
+            "Roberto",
+            "Juliana",
+            "Ricardo",
+            "Patrícia",
+            "Mariana",
+            "Thiago",
+            "Gabriel",
+            "Larissa",
+            "Eduardo",
+        ];
+
+        const sala1 = listaEstudantes.slice(0, listaEstudantes.length / 2);
+        const sala2 = listaEstudantes.slice(listaEstudantes.length / 2);
+
+        alert(`
+        Sala 1: ${sala1} \n 
+        Sala 2: ${sala2} 
+        `);
+    </script>
+</body>
+</html>
