@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let notas = [];
+        for (let i = 0; i < 5; i++) {
+            let nota = parseFloat(prompt("Digite a nota: "));
+            notas.push(nota);
+        }
+
+        notas.forEach((nota, index) => {
+            if (nota < 7) {
+                alert(`Nota ${index + 1}: ${nota} - Reprovado`);
+            } else if (nota >= 5 && nota < 7) {
+                alert(`Nota ${index + 1}: ${nota} - Recuperação`);
+            } else {
+                alert(`Nota ${index + 1}: ${nota} - Aprovado`);
+            }
+        });
+    </script>
+</body>
+</html>
