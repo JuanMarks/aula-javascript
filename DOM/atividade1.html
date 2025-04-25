@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh;">
+        <h1>Desafio</h1>
+        <p>Clique para acender ou apagar a lampada</p>
+        <img id="lampada" width="400" height="400" src="./assets/lampada_desligada.png" alt="Lampada Apagada">
+        <button style="margin-top: 40px;" id="btn">Clique</button>
+    </div>
+    
+    <script>
+        const btn = document.getElementById('btn');
+        const lampada = document.getElementById('lampada');
+
+        
+        // btn.addEventListener('click', function() {
+        //     if (lampada.src.includes('desligada')) {
+        //         lampada.setAttribute('src', './assets/lampada-acesa.jpg');
+        //         lampada.style.width = '400px';
+        //         lampada.style.height = '400px';
+        //     } else {
+        //         lampada.setAttribute('src', './assets/lampada_desligada.png');
+                
+        //     }
+        // });
+
+        btn.addEventListener('click', function(){
+            if (lampada.getAttribute('src') == './assets/lampada_desligada.png'){
+                lampada.setAttribute('src', './assets/lampada-acesa.jpg');
+                lampada.style.width = '400px';
+                lampada.style.height = '400px';
+            } else {
+                lampada.setAttribute('src', './assets/lampada_desligada.png');
+            }
+        })
+    </script>
+</body>
+</html>
