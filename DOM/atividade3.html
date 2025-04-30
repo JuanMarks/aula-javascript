@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Usuario</h1>
+        <input type="text" id="Nome" class="form-control mt-3" placeholder="Nome">
+        <input type="email" id="Email" class="form-control mt-3" placeholder="Email">
+        <input type="text" id="Profissao" class="form-control mt-3" placeholder="Profissão">
+        <button id="addUserButton" class="btn btn-primary mt-3">Adicionar Usuario</button>
+        
+    </div>
+
+    <section class="container" >
+        <div id="usuarios" class="row">
+
+        </div>
+        
+    </section>
+
+    <script>
+        const nomeInput = document.getElementById('Nome');
+        const emailInput = document.getElementById('Email');
+        const profissaoInput = document.getElementById('Profissao');
+        const addUserButton = document.getElementById('addUserButton');
+        const section = document.getElementById('usuarios');
+    
+        addUserButton.addEventListener('click', function() {
+            if (nomeInput.value === '' || emailInput.value === '' || profissaoInput.value === '') {
+                alert('Por favor, preencha todos os campos!');
+                return;
+            }
+    
+            const nomeValue = nomeInput.value;
+            const emailValue = emailInput.value;
+            const profissaoValue = profissaoInput.value;
+    
+            // Cria o card do usuário
+            const div = document.createElement('div');
+            div.className = 'col-md-4';
+            div.innerHTML = `
+                <div class="card mt-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">${nomeValue}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">${emailValue}</h6>
+                        <p class="card-text">${profissaoValue}</p>
+                        
+                    </div>
+                </div>
+            `;
+    
+            // Cria o botão "Remover"
+            const btn = document.createElement('button');
+            btn.className = 'btn btn-danger btn-sm mt-2';
+            btn.innerText = 'Remover';
+            btn.addEventListener('click', function() {
+                section.removeChild(div);
+            });
+    
+            // Adiciona o botão ao card
+            div.querySelector('.card-body').appendChild(btn);
+    
+            // Adiciona o card à seção de usuários
+            section.appendChild(div);
+    
+            // Limpa os campos de entrada
+            nomeInput.value = '';
+            emailInput.value = '';
+            profissaoInput.value = '';
+        });
+    </script>
+</body>
+</html>

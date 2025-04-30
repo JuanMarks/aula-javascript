@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    
     <h1>Lista de Tarefas</h1>
+    <input type="text" id="filter" placeholder="search...">
     <input type="text" id="taskInput" placeholder="Digite uma tarefa">
     <button id="addTaskButton">Adicionar Tarefa</button>
     <ul id="taskList">
@@ -19,9 +21,29 @@
         
         const ul = document.getElementById('taskList');
         
+        // Filtro de tarefas
+        const filter = document.getElementById('filter');
+        filter.addEventListener('input', function() {
+            const filterValue = filter.value.toLowerCase();
+            const tasks = ul.querySelectorAll('li');
+            
+            for (let i = 0; i < tasks.length; i++) {
+                const taskText = tasks[i].firstChild.textContent.toLowerCase();
+                if (taskText.includes(filterValue)) {
+                    tasks[i].style.display = '';
+                } else {
+                    tasks[i].style.display = 'none';
+                }
+            }
+        });
+        
         
         
         addTaskButton.addEventListener('click', function() {
+            if (taskInput.value === '') {
+                alert('Por favor, digite uma tarefa!');
+                return;
+            }
             const taskValue = taskInput.value;
             const li = document.createElement('li');
             const btn = document.createElement('button');
